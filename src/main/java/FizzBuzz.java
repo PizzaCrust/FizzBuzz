@@ -5,10 +5,9 @@ public class FizzBuzz {
     }
 
     public void fizzBuzz() {
-        int index = 0;
-        while (index != 100) {
-            boolean fizz = isNumberMultipleOf(index, 5);
-            boolean buzz = isNumberMultipleOf(index, 3);
+        for (int x = 0; x <= 100; x++) {
+            boolean fizz = isNumberMultipleOf(x, 5);
+            boolean buzz = isNumberMultipleOf(x, 3);
             boolean buzzed = false;
             if (fizz && buzz) {
                 System.out.println("FizzBuzz");
@@ -22,8 +21,8 @@ public class FizzBuzz {
                     buzzed = true;
                 }
             }
-            index++;
-            if (!buzzed) System.out.println(index);
+            x++;
+            if (!buzzed) System.out.println(x);
         }
     }
 
